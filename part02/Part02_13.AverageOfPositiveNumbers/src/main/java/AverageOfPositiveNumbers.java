@@ -8,22 +8,22 @@ public class AverageOfPositiveNumbers {
 
         int sumOfPositives = 0;
         int countPositives = 0;
+        int countNumber = 0;;
 
         while (true) {
             System.out.println("Give a number: ");
             int number = scanner.nextInt();
+            double averageOfPositives = (double) sumOfPositives / countPositives;
 
             if (number > 0) {
                 sumOfPositives += number;
                 countPositives++;
-            } else if (number == 0) {
-                double averageOfPositives = (double) sumOfPositives / countPositives;
-                System.out.println("Average of positives is: " + averageOfPositives);
-                break;
-            } else if (number < 0) {
-                continue;
-            } else if (countPositives == 0) {
+                countNumber++;
+            }if (number == 0 && countNumber == 0) {
                 System.out.println("Cannot calculate the average");
+                break;
+            } else if (number == 0) {
+                System.out.println("The average of positive numbers is :" + averageOfPositives);
                 break;
             }
 

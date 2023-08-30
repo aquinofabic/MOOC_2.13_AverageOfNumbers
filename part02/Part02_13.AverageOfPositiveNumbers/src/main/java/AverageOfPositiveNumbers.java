@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class AverageOfPositiveNumbers {
@@ -8,7 +7,7 @@ public class AverageOfPositiveNumbers {
 
         int sumOfPositives = 0;
         int countPositives = 0;
-        int countNumber = 0;;
+        int countNumber = 0;
 
         while (true) {
             System.out.println("Give a number: ");
@@ -19,7 +18,7 @@ public class AverageOfPositiveNumbers {
                 sumOfPositives += number;
                 countPositives++;
                 countNumber++;
-            }if (number == 0 && countNumber == 0) {
+            } else if (number == 0 && countNumber == 0) {
                 System.out.println("Cannot calculate the average");
                 break;
             } else if (number == 0) {
